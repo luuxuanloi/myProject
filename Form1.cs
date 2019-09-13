@@ -16,5 +16,14 @@ namespace github1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            int a = int.Parse(textBox1.Text);
+            int b = int.Parse(textBox1.Text);
+            int T = a + b;
+            button1.Text = T.ToString();
+        }
     }
 }
