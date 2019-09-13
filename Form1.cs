@@ -19,11 +19,13 @@ namespace github1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            int a = int.Parse(textBox1.Text);
-            int b = int.Parse(textBox1.Text);
-            int T = a + b;
-            button1.Text = T.ToString();
+            if (!string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                int a = int.Parse(textBox1.Text);
+                int b = int.Parse(textBox2.Text);
+                int T = a + b;
+                button1.Text = T.ToString();
+            }
         }
     }
 }
