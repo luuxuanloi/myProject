@@ -17,10 +17,15 @@ namespace github1
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            int b;
-            this.Close();
+            if (!string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                int a = int.Parse(textBox1.Text);
+                int b = int.Parse(textBox1.Text);
+                int T = a + b;
+                button1.Text = T.ToString();
+            }
         }
     }
 }
