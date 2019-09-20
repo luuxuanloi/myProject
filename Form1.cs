@@ -19,13 +19,38 @@ namespace github1
 
         private void button1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             if (!string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace(textBox2.Text))
             {
                 int a = int.Parse(textBox1.Text);
                 int b = int.Parse(textBox2.Text);
-                int T = a + b;
-                button1.Text = T.ToString();
+                calculator cal = new calculator(a, b);
+                label1.Text = cal.execute("+").ToString();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                int a = int.Parse(textBox1.Text);
+                int b = int.Parse(textBox2.Text);
+                calculator cal = new calculator(a, b);
+                label1.Text = cal.execute("-").ToString();
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
